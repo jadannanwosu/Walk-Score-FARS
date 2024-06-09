@@ -202,7 +202,7 @@ mean(cvResult)
 The average RMSE after cross-validation was too high to be confident in pedestrian-involved fatal crashes being a good predictor of walkability as measured by Walk Score, especially with a relatively high p-value of 0.268. Earlier, all incidents coded in FARS as being pedestrian-involved were included. To test whether selecting specific scenarios would eliminate noise and make the relationship clearer, below are the results when restricted to only the accidents that are most obviously relevant to said relationship.
 
 ```{r}
-# Selecting common pedestrian situations. Chose "walking in the road against traffic" but not "with traffic" due to the former usually being the legal protocol when there are no sidewalks. Refer to https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/813556 for PEDCTYPE code meanings.
+# Selecting common pedestrian situations. Chose "walking in the road against traffic" but not "with traffic" due to the former usually being the legal protocol when there are no sidewalks. Refer to FARS/CRSS Pedestrian Bicyclist Crash Typing Manual for PEDCTYPE code meanings.
 
 ped_crash_small <- pbtype %>%
   filter(PEDCTYPE== 341 | PEDCTYPE==342 | PEDCTYPE==430 | PEDCTYPE==440 | PEDCTYPE==510 | PEDCTYPE == 520 | PEDCTYPE==590 | PEDCTYPE==710 | PEDCTYPE==720 | PEDCTYPE==770 | PEDCTYPE==781 | PEDCTYPE==782 | PEDCTYPE==791 | PEDCTYPE==792 | PEDCTYPE==795 | PEDCTYPE==794 | PEDCTYPE==799 )
