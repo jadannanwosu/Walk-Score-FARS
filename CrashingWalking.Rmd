@@ -23,7 +23,7 @@ require(tidyverse)
 ```
 
 ```{r, echo=FALSE}
-
+# replace with your local filepath for these documents
 accident <- read_csv('/Users/jennenwosu/Documents/individual Research/crashingwalking/FARS2022NationalCSV/accident.csv')
 pbtype <- read_csv('/Users/jennenwosu/Documents/individual Research/crashingwalking/FARS2022NationalCSV/pbtype.csv')
 
@@ -39,6 +39,7 @@ ped_crash_acc <- accident %>%
 The "US Cities Urban Connectivity" dataset by VivianEllis on Kaggle (doi.org/10.34740/kaggle/dsv/7816051) includes information on 100 cities, all of which have populations over 200,000, and their convenience for publicly accessible transportation option.  Its inclusion of Walk Score and 2022 population numbers are useful for this project. To merge this data with the FARS data, some cleaning and reformatting was necessary.
 
 ```{r echo=FALSE}
+# replace with your local filepath for this document
 urban_connectivity <- read_csv('/Users/jennenwosu/Documents/individual Research/crashingwalking/urban_connectivity.csv')
 ```
 
